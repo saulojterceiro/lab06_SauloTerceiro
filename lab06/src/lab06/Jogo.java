@@ -1,5 +1,43 @@
 package lab06;
 
 public class Jogo {
-
+	private String nome;
+	private double preco;
+	private int score = 0;
+	private int zerou = 0;
+	private String tipo;
+	
+	public String getNome(){return nome;}
+	
+	public double getPreco(){return preco;}
+	
+	public int getScore(){return score;}
+	
+	public int getZerou(){return zerou;}
+	
+	public String getTipo(){return tipo;}
+	
+	
+	public void setNome(String nome){this.nome = nome;}
+	
+	public void setPreco(double preco){this.preco = preco;}
+	
+	public void setTipo(String tipo){this.tipo = tipo;}
+	
+	
+	public void registraJogada(int score, boolean zerou){
+		if (zerou){
+			this.zerou++;
+		}
+		
+		if (this.score ==0){
+			this.score = score;
+		}
+		
+		if (this.score < score){
+			this.score = score;
+		}
+		
+	}
 }
+
