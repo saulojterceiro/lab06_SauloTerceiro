@@ -1,11 +1,20 @@
 package lab06;
-
+ 
 public class Jogo {
 	private String nome;
 	private double preco;
 	private int score = 0;
 	private int zerou = 0;
 	private String tipo;
+	
+	public Jogo (String nome, double preco, String tipo)throws Exception {
+		if (preco<0){
+			Exception exception = new Exception("saulo");
+		}
+		this.nome = nome;
+		this.preco = preco;
+		this.tipo = tipo;
+	}
 	
 	public String getNome(){return nome;}
 	

@@ -1,0 +1,15 @@
+package lab06;
+
+import static org.junit.Assert.*;
+import lab06.Jogo;
+
+import org.junit.Test;
+
+public class lab06testes {
+	Jogo jogo = new Jogo("LOL",20.0,"MOBA");
+	@Test
+	public void test() {
+	    assertEquals("nome do jogo está errado","LOL",jogo.getNome()); 
+	}
+
+}
